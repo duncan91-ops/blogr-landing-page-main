@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My Solution](https://www.frontendmentor.io/solutions/blogr-landing-page-solution-using-sass-flexbox-and-grid-B6jFHS5y3)
+- Live Site URL: [Live Site](https://duncan91-ops.github.io/blogr-landing-page-main/)
 
 ## My process
 
