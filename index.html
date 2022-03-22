@@ -29,13 +29,19 @@
     <header class="header">
       <div class="header__container container">
         <nav class="nav">
-          <div class="left-nav">
-            <div class="logo__box">
-              <img src="./images/logo.svg" alt="logo" class="logo" />
-            </div>
-            <ul class="links">
+          <div class="logo__box">
+            <img src="./images/logo.svg" alt="logo" class="logo" />
+          </div>
+          <div class="links">
+            <ul class="links--product">
               <li class="link">
                 <a href="">Product</a>
+                <button class="toggle-links" type="button">
+                  <picture>
+                    <source media="(min-width: 1024px)" srcset="./images/icon-arrow-light.svg">
+                    <img src="./images/icon-arrow-dark.svg" alt="icon arrow">
+                  </picture>
+                </button>
                 <ul class="link__items">
                   <li class="link__item"><a href="">Overview</a></li>
                   <li class="link__item"><a href="">Pricing</a></li>
@@ -46,6 +52,12 @@
               </li>
               <li class="link">
                 <a href="">Company</a>
+                <button class="toggle-links" type="button">
+                  <picture>
+                    <source media="(min-width: 1024px)" srcset="./images/icon-arrow-light.svg">
+                    <img src="./images/icon-arrow-dark.svg" alt="icon arrow">
+                  </picture>
+                </button>
                 <ul class="link__items">
                   <li class="link__item"><a href="">About</a></li>
                   <li class="link__item"><a href="">Team</a></li>
@@ -55,6 +67,12 @@
               </li>
               <li class="link">
                 <a href="">Connect</a>
+                <button class="toggle-links active" type="button">
+                  <picture>
+                    <source media="(min-width: 1024px)" srcset="./images/icon-arrow-light.svg">
+                    <img src="./images/icon-arrow-dark.svg" alt="icon arrow">
+                  </picture>
+                </button>
                 <ul class="link__items">
                   <li class="link__item"><a href="">Contact</a></li>
                   <li class="link__item"><a href="">Newsletter</a></li>
@@ -62,28 +80,26 @@
                 </ul>
               </li>
             </ul>
+            <div class="buttons--user">
+              <button class="btn btn__tertiary" type="button">Login</a>
+              <button class="btn btn__primary" type="button">Sign Up</a>
+            </div>
           </div>
-          <div class="right-nav">
-            <div class="toggle-menu">
-              <button class="open">
-                <img
-                  src="./images/icon-hamburger.svg"
-                  alt="open menu"
-                  class="open__btn"
-                />
-              </button>
-              <button class="close">
-                <img
-                  src="./images/icon-close.svg"
-                  alt="close menu"
-                  class="close__btn"
-                />
-              </button>
-            </div>
-            <div class="user__links">
-              <a href="" class="user__link">Login</a>
-              <a href="" class="user__link">Sign Up</a>
-            </div>
+          <div class="toggle-menu">
+            <button class="open">
+              <img
+                src="./images/icon-hamburger.svg"
+                alt="open menu"
+                class="open__btn"
+              />
+            </button>
+            <button class="close">
+              <img
+                src="./images/icon-close.svg"
+                alt="close menu"
+                class="close__btn"
+              />
+            </button>
           </div>
         </nav>
         <div class="header__content">
@@ -106,7 +122,7 @@
           <div class="hero">
             <picture>
               <source
-                media="(min-width: 768px)"
+                media="(min-width: 1024px)"
                 srcset="./images/illustration-editor-desktop.svg"
               />
               <img
@@ -157,7 +173,7 @@
           <div class="hero">
             <picture>
               <source
-                media="(min-width: 768px)"
+                media="(min-width: 1024px)"
                 srcset="./images/illustration-laptop-desktop.svg"
               />
               <img
@@ -215,5 +231,6 @@
         <li class="link"><a href="">LinkedIn</a></li>
       </ul>
     </footer>
+    <script src="./app.js"></script>
   </body>
 </html>

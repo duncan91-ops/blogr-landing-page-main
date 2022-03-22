@@ -1,0 +1,220 @@
+.nav {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .links {
+    background-color: $primaryWhite;
+    text-align: center;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 30px 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    &--product {
+      list-style-type: none;
+      border-bottom: 1px solid $primaryGrayishBlue;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+
+      .link {
+        .toggle-links {
+          background-color: transparent;
+          border: none;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &.active {
+            img {
+              transform: rotate(180deg);
+            }
+
+            + .link__items {
+              display: block;
+            }
+          }
+        }
+
+        > a {
+          display: inline-block;
+          padding-bottom: 20px;
+          color: $tertiaryGrayishBlue;
+          font-family: $fontOverpass;
+          font-weight: 600;
+          font-size: 2rem;
+        }
+
+        a {
+          text-decoration: none;
+          color: $secondaryGrayishBlue;
+        }
+
+        &__items {
+          list-style-type: none;
+          display: none;
+          background-color: rgba($primaryGrayishBlue, 0.3);
+          border-radius: 5px;
+          margin-bottom: 20px;
+          padding: 10px;
+        }
+
+        &__item {
+          padding: 10px 0;
+        }
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      position: relative;
+      top: 10px;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+      box-shadow: none;
+
+      &.active {
+        position: relative;
+        top: 10px;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        box-shadow: none;
+      }
+
+      &--product {
+        display: flex;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+
+        .link {
+          &:hover {
+            .link__items {
+              display: block;
+            }
+
+            .toggle-links {
+              &.active + .link__items {
+                display: block;
+              }
+              &.active img,
+              img {
+                transform: rotate(180deg);
+              }
+            }
+          }
+
+          > a {
+            display: inline-block;
+            padding: 20px 0;
+            color: $primaryWhite;
+            font-weight: 600;
+            font-size: 1.6rem;
+          }
+
+          .toggle-links {
+            &.active {
+              img {
+                transform: rotate(0);
+              }
+
+              + .link__items {
+                display: none;
+              }
+            }
+            img {
+              margin-right: 20px;
+              transition: all 0.2s ease-in;
+            }
+          }
+
+          &__items {
+            display: none;
+            position: absolute;
+            padding: 20px;
+            width: 200px;
+            text-align: left;
+            background-color: $primaryWhite;
+          }
+
+          &__item {
+            padding: 10px 0;
+
+            &:hover a {
+              font-weight: 700;
+            }
+
+            a {
+              color: $primaryBlue;
+              transition: all 0.2s ease-in;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .toggle-menu {
+    // position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    &.active {
+      .close__btn {
+        display: block;
+      }
+
+      .open__btn {
+        display: none;
+      }
+    }
+
+    button {
+      height: 50px;
+      width: 50px;
+      background-color: transparent;
+      border: none;
+      offset: none;
+    }
+
+    .close__btn,
+    .open__btn {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .close__btn {
+      display: none;
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+}

@@ -3,3 +3,14 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
 }
+
+.heading__primary {
+  font-size: 3.6rem;
+  text-align: center;
+  color: $primaryWhite;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 5rem;
+  }
+}

@@ -1,0 +1,134 @@
+.header {
+  width: 100%;
+  height: 60rem;
+  position: relative;
+  background: url("../../images/bg-pattern-intro-mobile.svg") left -340px bottom -470px
+      no-repeat,
+    linear-gradient(to top, $secondaryLightRed, $secondaryVeryLightRed);
+  border-bottom-left-radius: 100px;
+
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__content {
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-family: $fontOverpass;
+  }
+
+  &__text {
+    color: $primaryWhite;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    font-weight: 300;
+  }
+
+  &__buttons {
+    display: inline-block;
+  }
+
+  .buttons--user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btn {
+      background-color: transparent;
+      padding: 15px 40px;
+      &__tertiary {
+        color: $tertiaryGrayishBlue;
+      }
+
+      &__primary {
+        color: $primaryWhite;
+        background: linear-gradient(
+          to right,
+          $secondaryVeryLightRed,
+          $secondaryLightRed
+        );
+        transition: all 0.2s ease-in;
+
+        &:hover {
+          background: $primaryLightRed;
+        }
+      }
+    }
+  }
+
+  .btn {
+    padding: 15px 25px;
+    border: none;
+    offset: none;
+    border-radius: 100px;
+    font-size: 1.6rem;
+    font-family: $fontOverpass;
+    font-weight: 600;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &__primary {
+      color: $primaryLightRed;
+      margin-right: 10px;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        background-color: $primaryVeryLightRed;
+        color: $primaryWhite;
+      }
+    }
+
+    &__secondary {
+      border: 1px solid $primaryWhite;
+      color: $primaryWhite;
+      background-color: transparent;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        background-color: $primaryWhite;
+        color: $primaryLightRed;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background: url("../../images/bg-pattern-intro-desktop.svg") top -1350px left -450px
+        no-repeat,
+      linear-gradient(to left, $secondaryLightRed, $secondaryVeryLightRed);
+  }
+
+  @media screen and (min-width: 1024px) {
+    .buttons--user {
+      flex-direction: row;
+      .btn {
+        padding: 15px 25px;
+        &__tertiary {
+          margin-right: 5px;
+          background-color: transparent;
+          color: $primaryWhite;
+        }
+
+        &__primary {
+          background: $primaryWhite;
+          color: $primaryLightRed;
+          transition: all 0.2s ease-in;
+
+          &:hover {
+            background: $primaryVeryLightRed;
+            color: $primaryWhite;
+          }
+        }
+      }
+    }
+  }
+}
