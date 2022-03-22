@@ -12,6 +12,7 @@ html {
 
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
 }
 
 .heading__primary {
-  font-size: 3.6rem;
+  font-size: 3.3rem;
   text-align: center;
   color: white;
   margin-bottom: 20px;
@@ -29,6 +30,82 @@ body {
 @media screen and (min-width: 1024px) {
   .heading__primary {
     font-size: 5rem;
+  }
+}
+
+.heading__secondary {
+  font-size: 3rem;
+  text-align: center;
+  color: #1f3f5b;
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  .heading__secondary {
+    font-size: 4rem;
+  }
+}
+
+.heading__tertiary {
+  color: #1f3f5b;
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.article__text {
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.footer {
+  background-color: #25252d;
+  border-top-right-radius: 100px;
+  margin-top: 100px;
+  font-family: "Overpass", sans-serif;
+}
+.footer .container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, min-content);
+  row-gap: 20px;
+}
+.footer .container .links {
+  list-style-type: none;
+}
+.footer .container .links .link {
+  margin-bottom: 10px;
+}
+.footer .container .links .link:hover {
+  cursor: pointer;
+}
+.footer .container .links .link a {
+  text-decoration: none;
+  color: #c8c8cb;
+}
+.footer .container .links .link--main {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 600px) {
+  .footer .container {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    margin-top: 300px;
   }
 }
 
@@ -140,6 +217,131 @@ body {
   .header .buttons--user .btn__primary:hover {
     background: #ff7a85;
     color: white;
+  }
+}
+
+.section {
+  margin-top: 100px;
+  font-family: "Overpass", sans-serif;
+}
+.section--top, .section--bottom {
+  text-align: center;
+  margin-top: 50px;
+}
+.section--top .article, .section--bottom .article {
+  width: 80%;
+  margin: 50px auto;
+}
+.section--mid {
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+  margin-top: 300px;
+  background: url("../../images/bg-pattern-circles.svg") top -100px right/contain no-repeat, linear-gradient(to bottom, #2c2d3f, #3f4164);
+}
+.section--mid .hero {
+  width: 100%;
+  text-align: center;
+}
+.section--mid .hero__img {
+  width: 100%;
+  transform: translateY(-50%);
+}
+.section--mid .article {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: -50%;
+  padding-bottom: 100px;
+}
+.section--mid .article__text {
+  color: white;
+}
+.section--mid .heading__tertiary {
+  color: white;
+  font-size: 3rem;
+}
+@media screen and (min-width: 600px) {
+  .section--mid {
+    margin-top: 300px;
+    background: url("../../images/bg-pattern-circles.svg") top -500px left -200px no-repeat, linear-gradient(to bottom, #2c2d3f, #3f4164);
+  }
+  .section--mid .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  .section--mid .hero__img {
+    width: 50%;
+    float: left;
+    position: absolute;
+    top: 50%;
+  }
+  .section--mid .article {
+    width: 50%;
+    margin-top: 0;
+    padding: 120px 0;
+    margin-left: 50%;
+  }
+  .section--mid .article__text {
+    text-align: left;
+  }
+  .section--mid .heading__tertiary {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section--top {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    width: 80%;
+    margin: 100px auto 0;
+  }
+  .section--top picture img {
+    width: auto;
+  }
+  .section--top .article {
+    margin-top: 0;
+  }
+  .section--top .content {
+    width: 50%;
+    margin-right: 50%;
+  }
+  .section--top picture {
+    position: absolute;
+    left: 55%;
+    top: -50%;
+  }
+  .section--bottom {
+    display: flex;
+    position: relative;
+    width: 80%;
+    margin: 100px auto 0;
+  }
+  .section--bottom .content {
+    padding-top: 150px;
+    width: 50%;
+    margin-left: 50%;
+  }
+  .section--bottom picture {
+    position: absolute;
+    right: 53%;
+  }
+  .section--bottom picture img {
+    width: auto;
+  }
+  .section .heading__tertiary {
+    text-align: left;
+  }
+  .section .article__text {
+    text-align: left;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section {
+    margin-top: 150px;
   }
 }
 
